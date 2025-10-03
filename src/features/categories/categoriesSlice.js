@@ -22,7 +22,6 @@ const categoriesSlice = createSlice({
       // payload: { name: string, type: 'Income' | 'Expense', icon: string }
       state.list.push({ id: uuidv4(), ...action.payload });
     },
-    // Future mein edit/delete bhi add kar sakte hain
   },
 });
 

@@ -14,7 +14,6 @@ const budgetsSlice = createSlice({
       reducer(state, action) {
         const { categoryName, monthYear } = action.payload;
         
-        // Agar goal already exist karta hai, toh update karo, warna add karo
         const existingIndex = state.budgetGoals.findIndex(
           (goal) => goal.categoryName === categoryName && goal.monthYear === monthYear
         );
@@ -25,7 +24,7 @@ const budgetsSlice = createSlice({
           state.budgetGoals.push({ id: uuidv4(), ...action.payload });
         }
       },
-      // monthYear format 'YYYY-MM' mein set karna
+      // monthYear format 'YYYY-MM'
       prepare(categoryName, limit, monthYear = new Date().toISOString().slice(0, 7)) {
         return {
           payload: { categoryName, limit: Number(limit), monthYear },

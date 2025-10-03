@@ -13,7 +13,7 @@ const transactionsSlice = createSlice({
       reducer(state, action) {
         state.transactions.push(action.payload);
       },
-      // Prepare function se ID aur date automatically generate kar sakte hain
+      //automatically generate ID and data for Prepare function
       prepare(transaction) {
         return {
           payload: {
