@@ -79,10 +79,10 @@ const Dashboard = () => {
     <div className="space-y-8">
       <h1 className="text-3xl font-extrabold text-gray-900">Dashboard ({BASE_CURRENCY})</h1>
       
-      {/* 1. Summary Cards */}
+      {/* Summary Cards */}
       <SummaryPanel summary={summary} baseCurrency={BASE_CURRENCY} />
       
-      {/* 2. Charts and Insights (Grid layout) */}
+      {/*Charts and Insights (Grid layout) */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         
         {/* Spending Chart (2/3 width) */}
@@ -97,7 +97,7 @@ const Dashboard = () => {
         </div>
       </div>
       
-      {/* 3. Recent Transactions (Optional: Can show a small list here or link to full list) */}
+      {/* Recent Transactions (Optional: Can show a small list here or link to full list) */}
       <div className="bg-white p-6 rounded-xl shadow-lg">
        <BudgetStatusCard/>
       </div>

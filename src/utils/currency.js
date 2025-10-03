@@ -29,19 +29,10 @@ export const convertToBaseCurrency = (amount, fromCurrency, rates) => {
     return amount; // Fallback
   }
   
-  // Formula: Amount * (TargetRate / SourceRate)
  
-  
-  // Simpler formula when API base is rates[API_BASE] = 1:
-  // Converted_Amount = Original_Amount * rates[BASE_CURRENCY] / rates[fromCurrency]
-  
-  // if rates base = USD hai: INR ka rate 83.0
-  // USD (10) to INR (BASE_CURRENCY) mein: 10 * 83.0 / 1.0 = 830
-  // EUR (10) to INR (BASE_CURRENCY) mein: 10 * 83.0 / rates[EUR]
-  
   const convertedAmount = amount * (rateToBase / rateFrom);
 
-  return parseFloat(convertedAmount.toFixed(2)); // Do decimal places fix 
+  return parseFloat(convertedAmount.toFixed(2));  
 };
 
 // Available currencies list 

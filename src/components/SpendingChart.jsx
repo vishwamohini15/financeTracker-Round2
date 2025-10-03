@@ -1,11 +1,9 @@
 import React from 'react';
 import { PieChart, Pie, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 
-// for Pie Chart colors
 const COLORS = ['#FF8042', '#0088FE', '#00C49F', '#FFBB28', '#A288E2', '#FF6384', '#36A2EB'];
 
 const SpendingChart = ({ categorySpending }) => {
-  // Array format: [{ name: 'Food', value: 5000 }, ...]
   const chartData = Object.keys(categorySpending)
     .map(category => ({
       name: category,

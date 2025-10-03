@@ -2,7 +2,6 @@ import { createSlice } from '@reduxjs/toolkit';
 import { v4 as uuidv4 } from 'uuid';
 
 const initialState = {
-  // budgetGoals: [{ id: '1', categoryName: 'Food & Dining', limit: 5000, monthYear: '2025-10' }]
   budgetGoals: [],
 };
 

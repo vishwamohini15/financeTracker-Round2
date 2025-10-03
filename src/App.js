@@ -6,11 +6,8 @@ import TransactionsList from './features/transactions/TransactionsList';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import BudgetManager from './features/budgets/BudgetManager';
-// import BudgetManager from './features/budgets/BudgetManager'; // Naya component name
-// import Header from './components/Header'; // Header component
 
 function App() {
-    // Mobile sidebar ke liye state
   const [isSidebarOpen, setIsSidebarOpen] = useState(false); 
   
   // Toggle function
@@ -19,16 +16,14 @@ function App() {
   };
   return (
      <div className="flex h-screen bg-gray-50 overflow-hidden">
-      {/* 1. Sidebar Component (Updated props and classes) */}
+      {/* Sidebar Component (Updated props and classes) */}
       <Sidebar 
         isOpen={isSidebarOpen} 
         onClose={toggleSidebar} 
       />
       
-      {/* 2. Main Content Area */}
       <div className="flex-1 flex flex-col overflow-hidden">
         
-        {/* 3. Header Component (Updated props) */}
         <Header 
           onMenuClick={toggleSidebar} 
         />
@@ -39,7 +34,6 @@ function App() {
           onClick={isSidebarOpen ? toggleSidebar : undefined} 
         >
           <Routes>
-            {/* ... Routes remain same ... */}
             <Route path="/" element={<Dashboard />} /> 
             <Route path="/transactions" element={<TransactionsList />} />
             <Route path="/add-transaction" element={<TransactionForm />} />

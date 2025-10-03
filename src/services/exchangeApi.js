@@ -4,11 +4,11 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 const API_KEY = process.env.REACT_APP_EXCHANGE_API_KEY;
 
 // Base currency all transactions  convert 
-export const BASE_CURRENCY = 'INR'; // Ya USD/EUR default 
+export const BASE_CURRENCY = 'INR'; 
 
 export const exchangeApi = createApi({
   reducerPath: 'exchangeApi',
-  // Base URL API_KEY include needed
+  // Base URL API_KEY include 
   baseQuery: fetchBaseQuery({ 
     baseUrl: `https://v6.exchangerate-api.com/v6/${API_KEY}`,
   }),

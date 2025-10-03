@@ -11,16 +11,12 @@ const InsightsPanel = ({ categorySpending }) => {
     }))
     .sort((a, b) => b.value - a.value);
 
-  // 1. Highest Spending Category
   const highestSpending = spendingArray[0];
   
-  // 2. High number of small transactions 
   const secondHighest = spendingArray[1];
   
-  // Total spending calculate karna
   const totalSpending = spendingArray.reduce((sum, item) => sum + item.value, 0);
 
-  // --- Insights Generate Karna ---
   const insights = [];
 
   if (highestSpending) {

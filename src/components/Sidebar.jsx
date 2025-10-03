@@ -10,11 +10,11 @@ const navItems = [
 
 ];
 
-// Naye props: isOpen aur onClose
+// new props: isOpen aur onClose
 const Sidebar = ({ isOpen, onClose }) => { 
   return (
     <>
-      {/* 1. Mobile Backdrop */}
+      {/* Mobile Backdrop */}
       {isOpen && (
         <div 
           className="fixed inset-0 z-20 bg-black opacity-50 md:hidden" 
@@ -22,7 +22,7 @@ const Sidebar = ({ isOpen, onClose }) => {
         ></div>
       )}
 
-      {/* 2. Actual Sidebar */}
+      {/* Actual Sidebar */}
       <div 
         className={`fixed inset-y-0 left-0 transform ${
           isOpen ? 'translate-x-0' : '-translate-x-full' 
